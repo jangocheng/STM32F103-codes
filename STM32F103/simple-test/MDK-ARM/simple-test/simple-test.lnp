@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"simple-test\startup_stm32f103xb.o"
+"simple-test\stm32f1xx_hal.o"
+"simple-test\stm32f1xx_hal_flash.o"
+"simple-test\stm32f1xx_hal_gpio_ex.o"
+"simple-test\stm32f1xx_hal_rcc.o"
+"simple-test\stm32f1xx_hal_gpio.o"
+"simple-test\stm32f1xx_hal_pwr.o"
+"simple-test\stm32f1xx_hal_tim_ex.o"
+"simple-test\stm32f1xx_hal_cortex.o"
+"simple-test\stm32f1xx_hal_rcc_ex.o"
+"simple-test\stm32f1xx_hal_tim.o"
+"simple-test\stm32f1xx_hal_dma.o"
+"simple-test\stm32f1xx_hal_flash_ex.o"
+"simple-test\system_stm32f1xx.o"
+"simple-test\main.o"
+"simple-test\stm32f1xx_hal_msp.o"
+"simple-test\stm32f1xx_it.o"
+--library_type=microlib --strict --scatter "simple-test\simple-test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "simple-test.map" -o simple-test\simple-test.axf
